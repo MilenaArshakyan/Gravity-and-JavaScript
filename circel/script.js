@@ -70,7 +70,7 @@ for (var i = 0; i < row; i++) {
     for (var j = 0; j < col; j++) {
         let x = GetRandInt(0, window.innerWidth);
         let y = GetRandInt(0, innerHeight)
-        let c = Bodies.circle(x, y, r, { friction: 0, restitution: 0.8 });
+        let c = Bodies.circle(x, y, r, { friction: 0, restitution: 0.8, isStatic: true,  render: { fillStyle: 'blue' }});
         var AtoB = Constraint.create({
             bodyA: c,
             pointB : mouse.position,
